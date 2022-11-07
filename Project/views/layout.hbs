@@ -11,8 +11,13 @@
   <body>
     <nav>
       {{#if user}}
-      <a href="/auth/signup">hello </a>
-      <a href="/auth/login">nice</a>
+      {{!-- <a href="/auth/signup">hello </a>
+      <a href="/auth/login">nice</a> --}}
+
+      <form id="logout-form" action="/auth/logout" method="POST">
+          <button>Logout</button>
+      </form>
+
       {{/if}}
 
     {{#unless user}}
