@@ -10,10 +10,13 @@
 {{#each activityDb}}
 
 <div id="activities-container">
-<p><a href="/description/{{this._id}}">Activity: {{this.activity}}</a></p>
-<p>Find: {{this.find}}</p>
-<p>From: {{this.from}}</p>
-<p>To: {{this.to}}</p>
+    {{#if this.image}}
+    <img id="img-actvities" src="{{this.image}}">
+    {{/if}}
+    <p><a href="/description/{{this._id}}">Activity: {{this.activity}}</a></p>
+    <p>Find: {{this.find}}</p>
+    <p>From: {{this.from}}</p>
+    <p>To: {{this.to}}</p>
 </div>
 
 

@@ -1,3 +1,50 @@
+<div class="container">
+
+    <form action="/create" method="post">
+
+    <h2 class="title">What Do You Want To Do?</h2>
+
+    <div class="input">
+      <input type="text" name="activity" placeholder="Surfing" />
+    </div>
+    <div class="input">
+      <textarea name="description" cols="30" rows="4"> </textarea>
+    </div>
+    <div class="input">
+      <label> Activity for
+        <input type="radio" name="find" value="couple" placeholder="Looking for" /> Couple
+        <input type="radio" name="find" value="group of friends" placeholder="Looking for" /> Group of friends
+        <input type="radio" name="find" value="date" placeholder="Looking for" /> Date
+        <input type="radio" name="find" value="family" placeholder="Looking for" /> Family
+      </label>
+    </div>
+    <div class="input">
+      <input type="date" name="from" placeholder="Start" />
+    </div>
+    <div class="input">
+      <input type="date" name="to" placeholder="End" />
+    </div>
+    <div class="">
+      <button type="submit">Create</button>
+    </div>
+
+    {{#if errorMessage}}
+      <p class="error">{{errorMessage}}</p>
+    {{/if}}
+
+  </form>
+</div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+{{!--     
     <form action="/create" method="post">
  
      <label> Activity
@@ -24,4 +71,4 @@
     </label>
 
    <button type="submit"> Submit </button>
-   </form>
+   </form> --}}
