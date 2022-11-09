@@ -13,6 +13,7 @@ const activities = [
     find: ["group of friends"],
     from: "11-11-2022",
     to: "11-11-2022",
+    image: "https://www.barcelona-tourist-guide.com/images/ext/attractions/montserrat/L550/montserrat-barcelona-29.jpg"
   },
   {
     activity: "Drinks", 
@@ -20,6 +21,7 @@ const activities = [
     find: ["date"],
     from: "11-11-2022",
     to: "11-11-2022",
+    image: "https://estaticos-cdn.elperiodico.com/clip/89afd1ee-ec20-4651-bbb3-d7c9ba5144cc_alta-libre-aspect-ratio_default_0.jpg"
   },
   {
     activity: "Lunch", 
@@ -27,6 +29,7 @@ const activities = [
     find: ["couple"],
     from: "11-11-2022",
     to: "11-11-2022",
+    image: ""
   }
 ]
 

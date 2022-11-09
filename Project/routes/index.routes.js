@@ -9,7 +9,7 @@ router.get("/", async (req, res) => {
   console.log("inside route")
     try{
       const activityDb = await Activity.find()
-       console.log(activityDb)
+      //  console.log(activityDb)
        res.render("index", {activityDb, user});
    }catch(err){
        console.log(err)
