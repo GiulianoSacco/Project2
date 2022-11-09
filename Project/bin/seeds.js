@@ -79,8 +79,8 @@ const createSeeds = async function () {
 
     const deleteAllActivities = await Activity.deleteMany()
     console.log("Db activities clean")
-    const deleteAllUsers = await User.deleteMany()
-    console.log("Db users clean")
+    // const deleteAllUsers = await User.deleteMany()
+    // console.log("Db users clean")
 
     const dbActivities = await Activity.create(activities)
     console.log(`activities created`)
