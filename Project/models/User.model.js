@@ -48,6 +48,10 @@ const userSchema = new Schema(
     },
     activityIds: {
       type: [{ type: Schema.Types.ObjectId, ref: 'Activity' }],
+    },
+    image: {
+      type: String, //Link
+      unique: true
     }
   },
   

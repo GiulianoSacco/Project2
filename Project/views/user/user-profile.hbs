@@ -1,4 +1,7 @@
-<h1>{{user.firstName}} Profile</h1>
+<h2>{{user.firstName}} Profile</h2>
+
+<img src="{{user.image}}">
+
 <a href="mailto:{{user.email}} ">Contact Me</a>
 
 <h3>Activities</h3>
@@ -8,7 +11,7 @@
 <p>{{this.find}}</p>
 <p>{{this.from}}</p>
 <p>{{this.to}}</p>
-<a href="/edit/{{this._id}}"><p>Edit activity</p></a>
+<a href="/edit/{{this._id}}">Edit activity</a>
 <form action="/description/{{this._id}}/delete" method="POST">
     <button>Delete</button>
 </form>
