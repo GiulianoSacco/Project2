@@ -1,20 +1,33 @@
-<h2>{{user.firstName}} Profile</h2>
 
-<img src="{{user.image}}">
+<section id="profile-container">
+    <div>
+        <img class="img-profile" src="{{user.image}}">
+    </div>
 
-<a href="mailto:{{user.email}} ">Contact Me</a>
+    <div id="profile-info-container">
+        <h3 class="profile-info">{{user.username}}</h3>
+        <a class="profile-info" href="mailto:{{user.email}} ">Contact Me</a>
+    </div>
+</section>
 
-<h3>Activities</h3>
-{{#each userProfile.activityIds}}
-<p>{{this.activity}}</p>
-<p>{{this.description}}</p>
-<p>{{this.find}}</p>
-<p>{{this.from}}</p>
-<p>{{this.to}}</p>
-<a href="/edit/{{this._id}}">Edit activity</a>
-<form action="/description/{{this._id}}/delete" method="POST">
-    <button>Delete</button>
-</form>
+
+<section id="profile-activities">
+    <h3>Activities</h3>
+
+        {{#each userProfile.activityIds}}
+        <div id="profile-activity-container">
+        <h4>{{this.activity}}</h4>
+        <p>{{this.description}}</p>
+        <p>{{this.find}}</p>
+        <p>{{this.from}}</p>
+        <p>{{this.to}}</p>
+        <a href="/edit/{{this._id}}">Edit activity</a>
+        <form action="/description/{{this._id}}/delete" method="POST">
+            <button>Delete</button>
+        </form>
+        </div>
 {{/each}}
+
+</section>
 
 

@@ -29,6 +29,10 @@ const actSchema = new Schema(
     to: {
       type: Date,
       required: true,
+    },
+    image: {
+      type: String, //Link
+      unique: true
     }
     // location: {
     //   type: Location
