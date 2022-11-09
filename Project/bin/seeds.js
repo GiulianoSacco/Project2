@@ -29,7 +29,7 @@ const activities = [
     find: ["couple"],
     from: "11-11-2022",
     to: "11-11-2022",
-    image: ""
+    image: "https://img.theculturetrip.com/wp-content/uploads/2016/02/IMG_4426.jpg"
   }
 ]
 
