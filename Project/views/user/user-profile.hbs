@@ -1,4 +1,5 @@
 
+
 <section id="profile-container">
     <div>
         <img class="img-profile" src="{{user.image}}">
@@ -10,25 +11,33 @@
     </div>
 </section>
 
+// NEW SECTION
+<a href="/user-profile/edit"><p>Edit profile</p></a>
+{{/if}}
+<h3>Description</h3>
+<p>{{userProfile.description}}</p>
 
 <section id="profile-activities">
     <h3>Activities</h3>
 
         {{#each userProfile.activityIds}}
         <div id="profile-activity-container">
+
             {{#if this.image}}
             <img id="img-actvities" src="{{this.image}}">
             {{/if}}
             <h4>{{this.activity}}</h4>
             <p>{{this.description}}</p>
             <p>{{this.find}}</p>
-            <p>{{this.from}}</p>
-            <p>{{this.to}}</p>
+            <p>{{finale}}</p>
+            <p>{{finale2}}</p>
             <a href="/edit/{{this._id}}">Edit activity</a>
             <form action="/description/{{this._id}}/delete" method="POST">
                 <button>Delete</button>
             </form>
+
         </div>
+
 {{/each}}
 
 </section>

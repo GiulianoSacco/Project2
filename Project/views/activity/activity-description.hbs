@@ -1,3 +1,33 @@
+
+
+<a href="/user-profile/{{act.author._id}}"><p>{{act.author.username}}</p></a>
+<p>{{act.activity}}</p>
+<p>{{act.description}}</p>
+<p>{{act.find}}</p>
+<p>{{finale}}</p>
+<p>{{finale2}}</p>
+<p>{{act.locations}}</p>
+<div class="map" id="map"></div>
+
+{{!-- Create hidden elements to store the display style of the map--}}
+<div class="hidden map-center"> {{mapCenter}}  </div>
+<div class="hidden map-zoom">  {{mapZoom}}  </div>
+
+{{!-- Create the markers and the popups for every location Paso 6--}}
+{{#each locations}} 
+  <div class="hidden popup">
+    <img src="{{this.img}}" alt="postcard">
+    <h1>{{this.name}}</h1>
+    <a href="/location/{{this.id}}">See more</a>
+  </div>
+
+  <div class="hidden pos">  {{this.pos}}  </div>
+  <div class="marker">  </div>
+{{/each}}
+
+
+
+
 <section>
 
             {{#if act.image}}
@@ -11,6 +41,7 @@
 <p>Looking to go with:{{act.find}}</p>
 <p>From: {{act.from}}</p>
 <p>To: {{act.to}}</p>
+
 <a href="mailto:{{act.author.email}} ">Contact Me</a>
 
 </section>
