@@ -22,10 +22,10 @@ router.get("/signup", isLoggedOut, (req, res) => {
 
 // POST /auth/signup
 router.post("/signup", isLoggedOut, (req, res) => {
-  const { firstName, lastName, username, email, password, birthday, gender, status } = req.body;
+  const { fullName, username, email, password, status } = req.body;
 
   // Check that username, email, and password are provided
-  if (firstName === "" || lastName === "" || username === "" || email === "" || password === "" || birthday === "" || gender === "" || status === "") {
+  if (fullName === "" || username === "" || email === "" || password === "" || status === "") {
     res.status(400).render("auth/signup", {
       errorMessage:
         "All fields are mandatory. Please provide your username, email and password.",
@@ -60,10 +60,14 @@ router.post("/signup", isLoggedOut, (req, res) => {
     .genSalt(saltRounds)
     .then((salt) => bcrypt.hash(password, salt))
     .then((hashedPassword) => {
+      console.log({fullName, username, email, password, status, hashedPassword})
       // Create a user and save it in the database
-      return User.create({ firstName, lastName, username, email, password: hashedPassword, birthday, gender, status });
+      const newUser = User.create({ fullName, username, email, password:hashedPassword, status });
+      console.log(newUser)
+      return newUser
     })
     .then((user) => {
+      console.log('after creating')
       res.redirect("/auth/login");
       req.session.currentUser = user
     })
@@ -71,6 +75,7 @@ router.post("/signup", isLoggedOut, (req, res) => {
       if (error instanceof mongoose.Error.ValidationError) {
         res.status(500).render("auth/signup", { errorMessage: error.message });
       } else if (error.code === 11000) {
+        console.log(error)
         res.status(500).render("auth/signup", {
           errorMessage:
             "Username and email need to be unique. Provide a valid username or email.",
