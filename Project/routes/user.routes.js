@@ -68,16 +68,11 @@ router.get("/user-profile/:userId", isLoggedIn, async (req, res) => {
         
 
 
-    try {
-        const userProfile = await User.findById(user._id).populate("activityIds")
-        // console.log(userProfile)
-
         res.render("user/user-profile", {userProfile, user})
 
     } catch (error) {
         console.log(error)
     }
-
 })
 
 router.get("/user-profile/edit",  (req, res) => {
@@ -100,5 +95,4 @@ router.get("/user-profile/edit",  (req, res) => {
 
 
 module.exports = router
-
 
