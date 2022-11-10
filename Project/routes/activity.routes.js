@@ -137,7 +137,7 @@ router.post('/edit/:activityId', async (req, res, next) => {
 
 
   // console.log(activityId)
-  const { activity, description, find, from, to} = req.body;
+
 
   // console.log(description)
 
