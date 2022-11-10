@@ -3,13 +3,7 @@ const { Schema, model } = require("mongoose");
 // TODO: Please make sure you edit the User model to whatever makes sense in this case
 const userSchema = new Schema(
   {
-    firstName: {
-      type: String,
-      required: true,
-      unique: true,
-      trim: true,
-    },
-    lastName: {
+    fullName: {
       type: String,
       required: true,
       unique: true,
@@ -32,15 +26,6 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    birthday: {
-      type: Date, 
-      required: true
-    },
-    gender: {
-      type: String, 
-      required: true,
-      enum: ['male', 'female', 'they']
-    }, 
     status: {
       type: String,
       required: true,
@@ -49,7 +34,6 @@ const userSchema = new Schema(
     activityIds: {
       type: [{ type: Schema.Types.ObjectId, ref: 'Activity' }],
     },
-
     description: {
       type: String,
     },

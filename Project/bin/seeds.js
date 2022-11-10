@@ -37,35 +37,26 @@ const activities = [
 
 const users = [
   {
-    firstName: "Pepe",
-    lastName: "Hernandez",
+    fullName: "Pepe",
     username: "pepe1",
     email: "pepe1@gmail.com",
     password: "123456", 
-    birthday: "09-06-1999",
-    gender: "male",
     status: "single",
     image: "https://upload.wikimedia.org/wikipedia/commons/5/55/Pepe_2018.jpg"
   },
   {
-    firstName: "Brittany",
-    lastName: "Smith",
+    fullName: "Brittany",
     username: "wanderingWonder",
     email: "brittany@gmail.com",
     password: "123456", 
-    birthday: "11-16-1986",
-    gender: "female", 
     status: "single",
     image: "https://static6.depositphotos.com/1008303/626/i/450/depositphotos_6264851-stock-photo-beautiful-caucasian-woman-outdoor.jpg"
   },
   {
-    firstName: "Anna",
-    lastName: "Fernandez",
+    fullName: "Anna",
     username: "AwesomeAnna",
     email: "anna@gmail.com",
     password: "123456", 
-    birthday: "11-01-1990",
-    gender: "female", 
     status: "in a relationship",
     image: "https://media.istockphoto.com/id/1368004438/photo/shot-of-a-couple-enjoying-a-day-at-the-beach.jpg?s=612x612&w=0&k=20&c=hMi6N-u6baFHC-P8C-8X_5iFshdPPicx7BCrBGM8ARc="
   }
