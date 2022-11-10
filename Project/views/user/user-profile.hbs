@@ -1,13 +1,17 @@
-<h1>{{user.firstName}} Profile</h1>
-<a href="mailto:{{user.email}} ">Contact Me</a>
-
+<h1>{{userProfile.username}} Profile</h1>
+{{#if user}}
+<a href="mailto:{{userProfile.email}} ">Contact Me</a>
+<a href="/user-profile/edit"><p>Edit profile</p></a>
+{{/if}}
+<h3>Description</h3>
+<p>{{userProfile.description}}</p>
 <h3>Activities</h3>
 {{#each userProfile.activityIds}}
 <p>{{this.activity}}</p>
 <p>{{this.description}}</p>
 <p>{{this.find}}</p>
-<p>{{this.from}}</p>
-<p>{{this.to}}</p>
+<p>{{this.finale}}</p>
+<p>{{this.finale2}}</p>
 <a href="/edit/{{this._id}}"><p>Edit activity</p></a>
 <form action="/description/{{this._id}}/delete" method="POST">
     <button>Delete</button>
