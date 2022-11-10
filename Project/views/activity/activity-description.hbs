@@ -1,11 +1,31 @@
 
+<section>
+  <div class="">
+    {{#if act.image}}
+      <img id="img-activity-description" src="{{act.image}}">
+    {{/if}}
+  </div>
 
-<a href="/user-profile/{{act.author._id}}"><p>{{act.author.username}}</p></a>
-<p>{{act.activity}}</p>
-<p>{{act.description}}</p>
-<p>{{act.find}}</p>
-<p>{{finale}}</p>
-<p>{{finale2}}</p>
+  <h3>{{act.activity}}</h3>
+
+  <div>
+    <p>Go with: <a href="/user-profile/{{act.author._id}}">{{act.author.username}}</a></p>
+    <p>About: </p>
+    <p>{{act.description}}</p>
+    <p>Looking to go with:{{act.find}}</p>
+  </div>
+  <div class="from-to-dates">
+    <i class="fas fa-calendar"></i>
+    <p class="date">From: {{finale}}</p>
+    <p class="date">To: {{finale2}}</p>
+  </div>
+
+    <a href="mailto:{{act.author.email}} ">Contact Me</a>
+
+
+
+
+
 <p>{{act.locations}}</p>
 <div class="map" id="map"></div>
 
@@ -19,26 +39,5 @@
   <div class="marker">  </div>
 
 
-
-
-
-<section>
-
-            {{#if act.image}}
-            <img id="img-actvities" src="{{act.image}}">
-            {{/if}}
-
-
-<h3>{{act.activity}}</h3>
-<p>Go with: {{act.author.username}}</p>
-<p>About: {{act.description}}</p>
-<p>Looking to go with:{{act.find}}</p>
-<p>From: {{act.from}}</p>
-<p>To: {{act.to}}</p>
-
-<a href="mailto:{{act.author.email}} ">Contact Me</a>
-
 </section>
-
-
 
