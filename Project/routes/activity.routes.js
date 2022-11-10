@@ -8,7 +8,7 @@ const isLoggedOut = require("../middleware/isLoggedOut");
 
 
 
-router.get("/create", (req, res) => {
+router.get("/create", isLoggedIn, (req, res) => {
   const user = req.session.currentUser
   res.render("activity/new-activity", {user})
 })
@@ -30,7 +30,7 @@ router.post("/create", async (req, res) => {
 })
 
 
-router.get("/description/:activityId", async (req, res) => {
+router.get("/description/:activityId", isLoggedIn, async (req, res) => {
   const user = req.session.currentUser;
   const {activityId}  = req.params
   try{
@@ -126,7 +126,7 @@ router.get("/description/:activityId", async (req, res) => {
 
 
 
-router.get('/edit/:activityId', async (req, res) => {
+router.get('/edit/:activityId', isLoggedIn, async (req, res) => {
   const user = req.session.currentUser;
   const { activityId } = req.params
   try{
