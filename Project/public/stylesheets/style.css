@@ -28,7 +28,60 @@ header {
 
 }
 
+/* HOMEPAGE */
 
+.homepage {
+  height: 100vh;
+  background-image: url("https://a.cdn-hotels.com/gdcs/production95/d1559/15062290-9308-43d7-a792-b3a74b2b10ef.jpg");
+  background-repeat: no-repeat;
+  background-size: 200% 100%;
+  background-position: center;
+}
+
+#homepage-container {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#logo-homepage {
+  width: 45%;
+}
+
+#logo-container {
+  display: flex;
+  justify-content: center;
+}
+
+#h2-homepage {
+  padding: 1.5rem;
+  color: #A67665;
+}
+
+.homepage-btn {
+  width: 7rem;
+  text-align: center;
+  padding: 0.25rem 0.65rem;
+  margin: 0.5rem;;
+  border-radius: 10px;
+  color: white;
+  background-color: #26528C;
+}
+
+#homepage-signup {
+  background-color: #26528C;
+  color: white;
+}
+
+#homepage-login {
+  background-color: white;
+  color: #26528C;
+}
+
+
+/* NAV */
 
 #nav-container {
   width: 100%;
@@ -146,9 +199,22 @@ li, a {
   color: #26528C;
 }
 
-
 .input-btn {
+  background-color: #26528C;
+  color: white;
+  padding: 0.5rem 3rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+
+.input-btn-white{
   background-color: white;
+  color: #26528C;
   padding: 0.5rem 3rem;
   margin: 0.5rem;
   border: none;
@@ -169,6 +235,19 @@ li, a {
   font-family: 'Ubuntu', sans-serif;
 }
 
+
+#nav-blue {
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  color: white;
+  background-color: #26528C;
+  font-size: 14px;
+}
+
+#nav-white {
+  color: #26528C;
+  font-size: 14px;
+}
 
 
 /* HOMEPAGE/ACTIVITIES */
@@ -218,6 +297,7 @@ li, a {
   height: 100px;
   border-radius: 25px;
   border: solid 2px #26528C;
+  background-repeat: no-repeat;
 }
 
 #profile-description-activities {

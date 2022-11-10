@@ -1,3 +1,20 @@
+{{#unless user}}
+
+<nav id="nav-container">
+
+  <a href="/"><img class="logo" src="/images/travelsouls-logo.png" alt="logo img"></a>
+
+  <ul class="nav-links">
+    <li class="nav-item"><a id="nav-white" href="/auth/signup">Signup</a></li>
+    <li class="nav-item"><a id="nav-blue" href="/auth/login">Login</a></li>
+  </ul>
+</nav>
+
+{{/unless}}
+
+
+
+
 <div class="signup-container">
 
   <form class="forms-container" action="/auth/signup" method="POST">
