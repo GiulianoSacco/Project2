@@ -103,13 +103,20 @@ router.get("/description/:activityId", async (req, res) => {
     },
 
     ]
-    
+
+    let location;
+    for(let i=0; i<locations.length; i++){
+      if(locations[i].name == act.locations){
+        location = locations[i]
+      }
+    }
+    console.log(location)
     // Define the dislay of the map Paso 8
     const mapCenter = [2.163887, 41.392620]
     const mapZoom = 6
   
     // Render the map Paso 9
-    res.render("activity/activity-description", {act, user, finale, finale2, locations, mapCenter, mapZoom})
+    res.render("activity/activity-description", {act, user, finale, finale2, location, mapCenter, mapZoom})
 
 
   }catch(err){
