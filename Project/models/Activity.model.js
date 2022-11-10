@@ -15,7 +15,7 @@ const actSchema = new Schema(
     find: {
         type: Array,
         items: {
-          enum: [ "couple", "group of friends", "date", "family" ]
+          enum: [ "Couple", "Group of friends", "Date", "Family" ]
         },
         "uniqueItems": true,
         "minItems": 1
@@ -25,19 +25,29 @@ const actSchema = new Schema(
     from: {
       type: Date,
       required: true,
+      
     },
     to: {
       type: Date,
       required: true,
     },
+
+    locations: {
+      type: String,
+      items: {
+        enum: ["Ciutat Vella", "Nou Barris","Horta-Guinardo", "Sarria-Sant Gervasi", "Les Corts", "Gracia", "Sants", "Eixample", "Sant Marti", "Sant Andreu" ]
+    },
+      "uniqueItems": true,
+      "minItems": 1
+  },
+
     image: {
       type: String, //Link
       unique: true
     }
-    // location: {
-    //   type: Location
-    // }
+
     
+
   },
   {
     timestamps: true,

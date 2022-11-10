@@ -1,12 +1,4 @@
-
-
-<a href="/user-profile/{{act.author._id}}"><p>{{act.author.username}}</p></a>
-<p>{{act.activity}}</p>
-<p>{{act.description}}</p>
-<p>{{act.find}}</p>
-<p>{{finale}}</p>
-<p>{{finale2}}</p>
-<p>{{act.locations}}</p>
+{{!-- Display the map Paso 3--}}
 <div class="map" id="map"></div>
 
 {{!-- Create hidden elements to store the display style of the map--}}
@@ -24,22 +16,5 @@
   <div class="hidden pos">  {{this.pos}}  </div>
   <div class="marker">  </div>
 {{/each}}
-
-
-
-
-<section>
-
-<h3>{{act.activity}}</h3>
-<p>Go with: {{act.author.username}}</p>
-<p>About: {{act.description}}</p>
-<p>Looking to go with:{{act.find}}</p>
-<p>From: {{act.from}}</p>
-<p>To: {{act.to}}</p>
-
-<a href="mailto:{{act.author.email}} ">Contact Me</a>
-
-</section>
-
 
 
