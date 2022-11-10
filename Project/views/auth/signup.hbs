@@ -1,4 +1,4 @@
-<div class="container">
+<div class="signup-container">
 
   <form class="forms-container" action="/auth/signup" method="POST">
 
@@ -8,23 +8,22 @@
     <div class="input">
       <i class="fa fa-user"></i>
 
-      <input type="text" name="fullName" placeholder="Homer Simpson" />
-
+      <input type="text" name="fullName" placeholder="Name" />
     </div>
-        <div class="input">
-      <i class="fa fa-lock"></i>
-      <input type="email" name="email" placeholder="Simpson@mail.com" />
+    <div class="input">
+      <i class="fa fa-envelope"></i>
+      <input type="email" name="email" placeholder="Email" />
+    </div>
+    <div class="input">
+      <i class="fa fa-user-circle"></i>
+      <input type="text" name="username" placeholder="Username" />
     </div>
     <div class="input">
       <i class="fa fa-lock"></i>
-      <input type="text" name="username" placeholder="SimpsonWooHoo" />
+      <input type="password" name="password" placeholder="Password" />
     </div>
     <div class="input">
-      <i class="fa fa-lock"></i>
-      <input type="password" name="password" placeholder="******" />
-    </div>
-    <div class="input">
-      <i class="fa fa-lock"></i>
+      <i class="fa fa-users"></i>
       <label> Relationship Status
         <select name="status" placeholder="">
           <option value="single">Single</option>
@@ -32,8 +31,8 @@
         </select>
       </label>
     </div>
-    <div class="">
-      <button type="submit">Signup</button>
+    <div>
+      <button class="input-btn" type="submit">Signup</button>
     </div>
 
     {{#if errorMessage}}
@@ -44,3 +43,4 @@
 </div>
 
 
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
