@@ -1,31 +1,33 @@
-<div class="container">
+<div class="create-container">
+    
+    <form class="forms-container" action="/create" method="post">
 
-    <form action="/create" method="post">
-
-    <h2 class="title">What Do You Want To Do?</h2>
+    <h2 class="title">What do you feel like doing?</h2>
 
     <div class="input">
       <input type="text" name="activity" placeholder="Surfing" />
     </div>
-    <div class="input">
-      <textarea name="description" cols="30" rows="4"> </textarea>
+    <div class="input" id="input-description">
+      <textarea id="input-textarea" name="description" cols="30" rows="2"> </textarea>
     </div>
-    <div class="input">
-      <label> Activity for
+    <div class="input" id="input-radio">
+      <label> Activity for a:</label>
+      <br>
         <input type="radio" name="find" value="Couple" placeholder="Looking for" /> Couple
         <input type="radio" name="find" value="Group of friends" placeholder="Looking for" /> Group of friends
         <input type="radio" name="find" value="Date" placeholder="Looking for" /> Date
         <input type="radio" name="find" value="Family" placeholder="Looking for" /> Family
-      </label>
     </div>
     <div class="input">
+      <i class="fas fa-calendar"></i>
       <input type="date" name="from" placeholder="Start" />
     </div>
     <div class="input">
+      <i class="fas fa-calendar"></i>
       <input type="date" name="to" placeholder="End" />
     </div>
     <div class="">
-      <button type="submit">Create</button>
+      <button class="input-btn" type="submit">Create</button>
     </div>
 
     {{#if errorMessage}}

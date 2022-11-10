@@ -149,6 +149,17 @@ li, a {
 }
 
 
+.container {
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: #26528C;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+
 
 
 /* HOMEPAGE/ACTIVITIES */
@@ -212,6 +223,62 @@ li, a {
   background-color: beige;
   border-radius: 25px;
 }
+
+
+
+/* CREATE ACTIVITY */
+
+.create-container {
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: #26528C;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#input-radio {
+  display: inline;
+  font-size: 12px;
+  height: auto !important;
+}
+
+#input-textarea {
+  width: 280px;
+}
+
+
+.input label { 
+  font-weight: 400;
+  font-size: 16px;
+}
+
+#input-description {
+  height: auto !important;
+  width: 100%;
+  resize: horizontal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
