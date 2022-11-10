@@ -6,6 +6,9 @@ turquoise: #3C92A6
 yellow: #F2D399
 light brown: #D9AB73
 dark brown: #A67665
+font-family: 'Ubuntu', sans-serif;
+background image: "https://a.cdn-hotels.com/gdcs/production95/d1559/15062290-9308-43d7-a792-b3a74b2b10ef.jpg"
+https://as01.epimg.net/betech/imagenes/2018/03/29/portada/1522336308_098657_1522336920_noticia_normal.jpg
  */
 
 
@@ -22,12 +25,19 @@ body {
 
 }
 
+header {
+
+}
+
+
 
 #nav-container {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 5%;
+  padding: 5%;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .nav-links {
@@ -36,7 +46,12 @@ body {
 }
 
 .nav-item {
-  padding: 1rem;
+  padding: 0.5rem;
+  margin: 0.25rem;
+}
+
+.nav-item i {
+  color: #26528C;
 }
 
 li, a {
@@ -54,7 +69,153 @@ li, a {
 }
 
 
-/* Map */
+/* LOG IN % SIGN UP */
+
+.forms-container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  height: 35px;
+  background-color: white;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 10% 90%;
+}
+
+.input i {
+  color: #26528C;
+}
+
+.input input {
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.input label {
+  font-size: 12px;
+}
+
+.signup-container {
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: #26528C;
+  font-family: 'Ubuntu', sans-serif;
+  background-image: url("https://a.cdn-hotels.com/gdcs/production95/d1559/15062290-9308-43d7-a792-b3a74b2b10ef.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.login-container {
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: #26528C;
+  font-family: 'Ubuntu', sans-serif;
+  background-image: url("https://media.istockphoto.com/id/1148606629/photo/where-will-this-summer-take-you.jpg?s=612x612&w=0&k=20&c=7oPIM1lH5gIooFBEpNtec6db16kYFb65w2-AU0bmGg4=");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.title {
+  padding: 0.25rem;
+  color: #26528C;
+}
+
+.input-btn {
+  background-color: white;
+  padding: 0.5rem 3rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+
+
+
+/* HOMEPAGE/ACTIVITIES */
+
+#h2-home-activities {
+  padding: 0.5rem;
+  text-align: center;
+}
+
+#activities-container {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: beige;
+  border-radius: 25px;
+}
+
+#img-actvities {
+  height: 25%;
+  
+}
+
+
+/* USER PROFILE */
+
+#profile-container {
+  display: flex;
+  padding: 1rem;
+}
+
+#profile-info-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+
+}
+
+.profile-info {
+  padding: 0.25rem;
+}
+
+.img-profile {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: solid 2px #26528C;
+}
+
+#profile-activities {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+#profile-activities {
+  padding: 1rem;
+}
+
+#profile-activity-container {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: beige;
+  border-radius: 25px;
+}
+
+
+
+/* MAP */
 
 .location {
   width: 100%;
@@ -103,127 +264,11 @@ body {
   height: 300px
 }
 
-/* INDEX */
-
-/* #welcome {
-  background-image: url("https://a.cdn-hotels.com/gdcs/production95/d1559/15062290-9308-43d7-a792-b3a74b2b10ef.jpg");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 50vh;
-} */
 
 
 
 
-/* LOG IN % SIGN UP */
 
-.forms-container {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.input {
-  margin: 0.5rem;
-  padding: 0.5rem;
-  width: 100%;
-  height: 35px;
-  background-color: white;
-  border-radius: 10px;
-  display: grid;
-  grid-template-columns: 10% 90%;
-}
-
-.input i {
-  color: #26528C;
-}
-
-.input input {
-  background: none;
-  outline: none;
-  border: none;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0.5rem;
-  background-color: #26528C;
-}
-
-.title {
-  padding: 0.25rem;
-}
-
-
-
-
-/* HOMEPAGE/ACTIVITIES */
-
-#h2-home-activities {
-  padding: 0.5rem;
-  text-align: center;
-}
-
-#activities-container {
-  margin: 1rem;
-  padding: 1rem;
-  background-color: beige;
-  border-radius: 25px;
-}
-
-#img-actvities {
-  height: 25%;
-  
-}
-
-
-
-
-/* USER PROFILE */
-
-#profile-container {
-  display: flex;
-  padding: 1rem;
-}
-
-#profile-info-container {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-
-}
-
-.profile-info {
-  padding: 0.25rem;
-}
-
-.img-profile {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: solid 2px #26528C;
-}
-
-#profile-activities {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-#profile-activities {
-  padding: 1rem;
-}
-
-#profile-activity-container {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  background-color: beige;
-  border-radius: 25px;
-}
 
 
 

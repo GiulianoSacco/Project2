@@ -1,5 +1,5 @@
 
-<div class="container">
+<div class="login-container">
 
   <form class="forms-container" action="/auth/login" method="POST">
 
@@ -8,14 +8,14 @@
 
     <div class="input">
       <i class="fa fa-user"></i>
-      <input type="text" name="username" placeholder="Your username" />
+      <input type="text" name="username" placeholder="Username" />
     </div>
     <div class="input">
       <i class="fa fa-lock"></i>
-      <input type="password" name="password" placeholder="Your password" />
+      <input type="password" name="password" placeholder="Password" />
     </div>
-    <div class="">
-      <button type="submit">Login</button>
+    <div>
+      <button class="input-btn" type="submit">Login</button>
     </div>
 
     {{#if errorMessage}}
