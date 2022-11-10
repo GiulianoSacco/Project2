@@ -22,10 +22,10 @@ router.get("/signup", isLoggedOut, (req, res) => {
 
 // POST /auth/signup
 router.post("/signup", isLoggedOut, (req, res) => {
-  const { firstName, lastName, username, email, password, birthday, gender, status } = req.body;
+  const { fullName, username, email, password, status } = req.body;
 
   // Check that username, email, and password are provided
-  if (firstName === "" || lastName === "" || username === "" || email === "" || password === "" || birthday === "" || gender === "" || status === "") {
+  if (fullName === "" || username === "" || email === "" || password === "" || status === "") {
     res.status(400).render("auth/signup", {
       errorMessage:
         "All fields are mandatory. Please provide your username, email and password.",
@@ -61,11 +61,11 @@ router.post("/signup", isLoggedOut, (req, res) => {
     .then((salt) => bcrypt.hash(password, salt))
     .then((hashedPassword) => {
       // Create a user and save it in the database
-      return User.create({ firstName, lastName, username, email, password: hashedPassword, birthday, gender, status });
+      return User.create({ fullName, username, email, password: hashedPassword, status });
     })
     .then((user) => {
-      res.redirect("/auth/login");
       req.session.currentUser = user
+      res.redirect("/");
     })
     .catch((error) => {
       if (error instanceof mongoose.Error.ValidationError) {

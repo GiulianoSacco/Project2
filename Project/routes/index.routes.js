@@ -9,8 +9,6 @@ router.get("/", async (req, res) => {
   console.log("inside route")
     try{
       const activityDb = await Activity.find()
-
-       console.log(activityDb)
        
        activityDb.forEach( (act) => {
         const day = act.from.getUTCDay()

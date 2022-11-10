@@ -143,12 +143,6 @@ router.post('/edit/:activityId', async (req, res, next) => {
   const { activity, description, find, from, to} = req.body;
 
 
-  // console.log(activityId)
-
-
-  // console.log(description)
-
-
   try{
   const actiDb = await Activity.findByIdAndUpdate(activityId, { activity, description, find, from, to}, { new: true })
   res.redirect(`/user-profile`)
