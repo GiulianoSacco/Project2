@@ -24,15 +24,20 @@
 
         {{#each userProfile.activityIds}}
         <div id="profile-activity-container">
-        <h4>{{this.activity}}</h4>
-        <p>{{this.description}}</p>
-        <p>{{this.find}}</p>
-        <p>{{finale}}</p>
-        <p>{{finale}}</p>
-        <a href="/edit/{{this._id}}">Edit activity</a>
-        <form action="/description/{{this._id}}/delete" method="POST">
-            <button>Delete</button>
-        </form>
+
+            {{#if this.image}}
+            <img id="img-actvities" src="{{this.image}}">
+            {{/if}}
+            <h4>{{this.activity}}</h4>
+            <p>{{this.description}}</p>
+            <p>{{this.find}}</p>
+            <p>{{finale}}</p>
+            <p>{{finale2}}</p>
+            <a href="/edit/{{this._id}}">Edit activity</a>
+            <form action="/description/{{this._id}}/delete" method="POST">
+                <button>Delete</button>
+            </form>
+
         </div>
 
 {{/each}}

@@ -24,6 +24,11 @@
 
 <section>
 
+            {{#if act.image}}
+            <img id="img-actvities" src="{{act.image}}">
+            {{/if}}
+
+
 <h3>{{act.activity}}</h3>
 <p>Go with: {{act.author.username}}</p>
 <p>About: {{act.description}}</p>

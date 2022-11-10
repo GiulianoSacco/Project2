@@ -60,7 +60,9 @@ router.post("/signup", isLoggedOut, (req, res) => {
     .genSalt(saltRounds)
     .then((salt) => bcrypt.hash(password, salt))
     .then((hashedPassword) => {
+      console.log({fullName, username, email, password, status, hashedPassword})
       // Create a user and save it in the database
+      
       return User.create({ fullName, username, email, password: hashedPassword, status });
     })
     .then((user) => {
@@ -71,6 +73,7 @@ router.post("/signup", isLoggedOut, (req, res) => {
       if (error instanceof mongoose.Error.ValidationError) {
         res.status(500).render("auth/signup", { errorMessage: error.message });
       } else if (error.code === 11000) {
+        console.log(error)
         res.status(500).render("auth/signup", {
           errorMessage:
             "Username and email need to be unique. Provide a valid username or email.",

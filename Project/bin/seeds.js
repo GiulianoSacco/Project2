@@ -6,6 +6,7 @@ const User = require("../models/User.model")
 const MONGO_URI = "mongodb://localhost:27017/project2"
 
 
+
 const activities = [
   {
     activity: "Hiking", 
@@ -35,6 +36,7 @@ const activities = [
     image: "https://img.theculturetrip.com/wp-content/uploads/2016/02/IMG_4426.jpg"
   }
 ]
+
 
 
 
@@ -74,13 +76,13 @@ const createSeeds = async function () {
     console.log("Test")
     console.log(`Connected to database: ${connect.connections[0].name}`)
 
-    const deleteAllActivities = await Activity.deleteMany()
-    console.log("Db activities clean")
+   // const deleteAllActivities = await Activity.deleteMany()
+    //console.log("Db activities clean")
     // const deleteAllUsers = await User.deleteMany()
     // console.log("Db users clean")
 
-    const dbActivities = await Activity.create(activities)
-    console.log(`activities created`)
+    //const dbActivities = await Activity.create(activities)
+    //console.log(`activities created`)
     const dbUsers = await User.create(users)
     console.log(`users created`)
 
