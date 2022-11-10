@@ -13,7 +13,10 @@ router.get("/user-profile", isLoggedIn, async (req, res) => {
 
     try {
         const userProfile = await User.findById(user._id).populate("activityIds")
-        res.render("user/user-profile", {userProfile, user})
+        console.log(userProfile)
+        let isTheSame = true
+        let isItTheSame = false
+        res.render("user/user-profile", {userProfile, user, isTheSame})
 
     } catch (error) {
         console.log(error)
@@ -21,7 +24,7 @@ router.get("/user-profile", isLoggedIn, async (req, res) => {
 
 })
 
-router.get("/user-profile/edit",  (req, res) => {
+router.get("/user-profile/edit", isLoggedIn,  (req, res) => {
     // const user = req.session.currentUser
     res.render("user/edit-profile")
 })
@@ -29,6 +32,7 @@ router.get("/user-profile/edit",  (req, res) => {
  router.post("/user-profile/edit", async (req, res) => {
      const {description} = req.body
      const userId = req.session.currentUser._id
+    
      console.log(description)
      console.log(userId)
      try{
@@ -44,10 +48,26 @@ router.get("/user-profile/edit",  (req, res) => {
 router.get("/user-profile/:userId", isLoggedIn, async (req, res) => {
     const user = req.session.currentUser;
     const { userId } = req.params
+    let isTheSame = null
+    let isItTheSame = true
+
     try {
+        if(user._id === userId){
+            isTheSame = true
+        }else {
+            isTheSame = false
+        }
+
+        if(user._id === userId){
+            isItTheSame = false
+        }else {
+            isItTheSame = true
+        }
+        console.log(isTheSame)
         const userProfile = await User.findById(userId).populate("activityIds")
         console.log(userProfile)
-
+        
+        
 
        userProfile.activityIds.forEach( (act) => {
             const day = act.from.getUTCDay()
@@ -67,30 +87,20 @@ router.get("/user-profile/:userId", isLoggedIn, async (req, res) => {
         });
         
 
-
-        res.render("user/user-profile", {userProfile, user})
+        console.log({user, userId})
+        res.render("user/user-profile", {userProfile, user, isTheSame})
 
     } catch (error) {
         console.log(error)
     }
 })
 
-router.get("/user-profile/edit",  (req, res) => {
-    // const user = req.session.currentUser
-    res.render("user/edit-profile")
+router.get("/user-profile/edit", isLoggedIn,  (req, res) => {
+    const user = req.session.currentUser
+    res.render("user/edit-profile", user)
 })
 
-// router.post("/userProfile/edit", async (req, res) => {
-//     const description = req.body
-//     console.log(description)
-//     try{
-//         const newdes = await User.create(description)
-//         res.redirect("/user-profile")
-//     }catch (err){
-//         console.log(err)
-//         res.render("user/edit-profile")
-//     }
-//   })
+
 
 
 
