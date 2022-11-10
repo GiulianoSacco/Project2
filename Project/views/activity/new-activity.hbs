@@ -19,11 +19,29 @@
       </label>
     </div>
     <div class="input">
-      <input type="date" name="from" placeholder="Start" />
+      <input type="datetime-local" name="from" placeholder="Start" />
     </div>
     <div class="input">
-      <input type="date" name="to" placeholder="End" />
+      <input type="datetime-local" name="to" placeholder="End" />
     </div>
+
+    <div class="input">
+    <label for="locations"> Where
+    <select name="locations" id="locations">
+    <option label="Ciutat Vella" value="Ciutat Vella">Ciutat Vella  </option>
+    <option label="Nou Barris"  value="Nou Barris">Nou Barris </option>
+    <option label="Horta-Guinardo"  value="Horta-Guinardo">Horta-Guinardo </option>
+    <option label="Sarria-Sant Gervasi"  value="Sarria-Sant Gervasi">Sarria-Sant Gervasi  </option>
+    <option label="Les Corts"  value="Les Corts">Les Corts  </option>
+    <option label="Gracia"  value="Gracia">Gracia </option>
+    <option label="Sants"  value="Sants">Sants  </option>
+    <option label="Eixample"  value="Eixample">Eixample </option>
+    <option label="Sant Marti"  value="Sant Marti">La Nueva Izquierda del Ensanche  </option>
+    <option label="Sant Andreu"  value="Sant Andreu">San Antonio</option>
+</select>
+</label>
+    </div>
+
     <div class="">
       <button type="submit">Create</button>
     </div>

@@ -21,7 +21,7 @@ router.get("/user-profile", isLoggedIn, async (req, res) => {
 
 })
 
-router.get("/user-profile/edit",  (req, res) => {
+router.get("/user-profile/edit", isLoggedIn,  (req, res) => {
     // const user = req.session.currentUser
     res.render("user/edit-profile")
 })
@@ -75,9 +75,9 @@ router.get("/user-profile/:userId", isLoggedIn, async (req, res) => {
     }
 })
 
-router.get("/user-profile/edit",  (req, res) => {
-    // const user = req.session.currentUser
-    res.render("user/edit-profile")
+router.get("/user-profile/edit", isLoggedIn,  (req, res) => {
+    const user = req.session.currentUser
+    res.render("user/edit-profile", user)
 })
 
 // router.post("/userProfile/edit", async (req, res) => {
