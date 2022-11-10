@@ -10,6 +10,7 @@ const isLoggedIn = require("../middleware/isLoggedIn");
 
 router.get("/user-profile", isLoggedIn, async (req, res) => {
     const user = req.session.currentUser;
+
     try {
         const userProfile = await User.findById(user._id).populate("activityIds")
         res.render("user/user-profile", {userProfile, user})
@@ -65,6 +66,12 @@ router.get("/user-profile/:userId", isLoggedIn, async (req, res) => {
             act.finale2 = `${day2}/${month2}/${year2}    ${hour2}:${minute2}`
         });
         
+
+
+    try {
+        const userProfile = await User.findById(user._id).populate("activityIds")
+        // console.log(userProfile)
+
         res.render("user/user-profile", {userProfile, user})
 
     } catch (error) {

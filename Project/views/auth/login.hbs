@@ -1,24 +1,31 @@
-<div id="login-form">
-  <h2>Log In</h2>
-  <form action="/auth/login" method="POST">
 
-    <label> Username
+<div class="container">
+
+  <form class="forms-container" action="/auth/login" method="POST">
+
+    <h2 class="title">Welcome TravelSouls</h2>
+    <p class="title">Sign in to check out where go next!</p>
+
+    <div class="input">
+      <i class="fa fa-user"></i>
       <input type="text" name="username" placeholder="Your username" />
-    </label>
-
-    {{!-- <label> Email
-      <input type="email" name="email" placeholder="Your email" />
-    </label> --}}
-
-    <label> Password
+    </div>
+    <div class="input">
+      <i class="fa fa-lock"></i>
       <input type="password" name="password" placeholder="Your password" />
-    </label>
-
-    <button type="submit">Log In</button>
-
+    </div>
+    <div class="">
+      <button type="submit">Login</button>
+    </div>
 
     {{#if errorMessage}}
       <p class="error">{{errorMessage}}</p>
     {{/if}}
+
   </form>
 </div>
+
+
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+

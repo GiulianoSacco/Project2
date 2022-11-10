@@ -31,6 +31,7 @@ const actSchema = new Schema(
       type: Date,
       required: true,
     },
+
     locations: {
       type: String,
       items: {
@@ -38,7 +39,15 @@ const actSchema = new Schema(
     },
       "uniqueItems": true,
       "minItems": 1
-  } 
+  },
+
+    image: {
+      type: String, //Link
+      unique: true
+    }
+
+    
+
   },
   {
     timestamps: true,

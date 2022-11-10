@@ -35,6 +35,7 @@ router.get("/description/:activityId", async (req, res) => {
   const {activityId}  = req.params
   try{
     const act = await Activity.findById(activityId).populate("author")
+
     const day = act.from.getUTCDate()
     const month = act.from.getUTCMonth()
     const year = act.from.getUTCFullYear()
@@ -109,6 +110,8 @@ router.get("/description/:activityId", async (req, res) => {
   
     // Render the map Paso 9
     res.render("activity/activity-description", {act, user, finale, finale2, locations, mapCenter, mapZoom})
+
+
   }catch(err){
      console.log(err)
   }
@@ -129,7 +132,14 @@ router.get('/edit/:activityId', async (req, res) => {
 
 router.post('/edit/:activityId', async (req, res, next) => {
   const { activityId } = req.params;
+
   const { activity, description, find, from, to} = req.body;
+
+
+  // console.log(activityId)
+  const { activity, description, find, from, to} = req.body;
+
+  // console.log(description)
 
 
   try{

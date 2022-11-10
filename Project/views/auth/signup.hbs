@@ -1,51 +1,56 @@
-<div id="form">
-  <h2>Sign Up</h2>
-  <form action="/auth/signup" method="POST">
+<div class="container">
 
-    <label> First Name
+  <form class="forms-container" action="/auth/signup" method="POST">
+
+  <h2 class="title">Welcome TravelSouls</h2>
+  <p class="title">Let's Get Your Journey Started!</p>
+
+    <div class="input">
+      <i class="fa fa-user"></i>
       <input type="text" name="firstName" placeholder="Homer" />
-    </label>
-
-    <label> Last Name
+    </div>
+    <div class="input">
+      <i class="fa fa-lock"></i>
       <input type="text" name="lastName" placeholder="Simpson" />
-    </label>
-
-    <label> Username
+    </div>
+    <div class="input">
+      <i class="fa fa-lock"></i>
       <input type="text" name="username" placeholder="SimpsonWooHoo" />
-    </label>
-
-    <label> Email
-      <input type="email" name="email" placeholder="simpson@mail.com" />
-    </label>
-
-    <label> Password
+    </div>
+    <div class="input">
+      <i class="fa fa-lock"></i>
       <input type="password" name="password" placeholder="******" />
-    </label>
-
-    <label> Birthday
+    </div>
+    <div class="input">
+      <i class="fa fa-lock"></i>
       <input type="date" name="birthday" placeholder="Birthday" />
-    </label>
-
-    <label> Gender
-      <input type="radio" name="gender" value="female" placeholder="Birthday" /> Female
-      <input type="radio" name="gender" value="male" placeholder="Birthday" /> Male
-      <input type="radio" name="gender" value="they" placeholder="Birthday" /> They
-    </label>
-
-    <label> Relationship Status
-      <select name="status" placeholder="">
-        <option value="single">Single</option>
-        <option value="in a relationship">In a Relationship</option>
-      </select>
-    </label>
-
-
-
-    <button type="submit">Sign Up</button>
-
+    </div>
+    <div class="input">
+      <i class="fa fa-lock"></i>
+      <label> Gender
+        <input type="radio" name="gender" value="female" placeholder="Birthday" /> Female
+        <input type="radio" name="gender" value="male" placeholder="Birthday" /> Male
+        <input type="radio" name="gender" value="they" placeholder="Birthday" /> They
+      </label>
+    </div>
+    <div class="input">
+      <i class="fa fa-lock"></i>
+      <label> Relationship Status
+        <select name="status" placeholder="">
+          <option value="single">Single</option>
+          <option value="in a relationship">In a Relationship</option>
+        </select>
+      </label>
+    </div>
+    <div class="">
+      <button type="submit">Signup</button>
+    </div>
 
     {{#if errorMessage}}
       <p class="error">{{errorMessage}}</p>
     {{/if}}
+
   </form>
 </div>
+
+

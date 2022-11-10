@@ -19,13 +19,15 @@ dark brown: #A67665
 
 body {
 
+
 }
+
 
 #nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 5%;
+  padding: 0.5rem 5%;
 }
 
 .nav-links {
@@ -52,6 +54,7 @@ li, a {
 }
 
 
+/* Map */
 
 .location {
   width: 100%;
@@ -99,3 +102,128 @@ body {
   width: 300px;
   height: 300px
 }
+
+/* INDEX */
+
+/* #welcome {
+  background-image: url("https://a.cdn-hotels.com/gdcs/production95/d1559/15062290-9308-43d7-a792-b3a74b2b10ef.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 50vh;
+} */
+
+
+
+
+/* LOG IN % SIGN UP */
+
+.forms-container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  height: 35px;
+  background-color: white;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 10% 90%;
+}
+
+.input i {
+  color: #26528C;
+}
+
+.input input {
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: #26528C;
+}
+
+.title {
+  padding: 0.25rem;
+}
+
+
+
+
+/* HOMEPAGE/ACTIVITIES */
+
+#h2-home-activities {
+  padding: 0.5rem;
+  text-align: center;
+}
+
+#activities-container {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: beige;
+  border-radius: 25px;
+}
+
+#img-actvities {
+  height: 25%;
+  
+}
+
+
+
+
+/* USER PROFILE */
+
+#profile-container {
+  display: flex;
+  padding: 1rem;
+}
+
+#profile-info-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+
+}
+
+.profile-info {
+  padding: 0.25rem;
+}
+
+.img-profile {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: solid 2px #26528C;
+}
+
+#profile-activities {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+#profile-activities {
+  padding: 1rem;
+}
+
+#profile-activity-container {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: beige;
+  border-radius: 25px;
+}
+
+
+

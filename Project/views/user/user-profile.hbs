@@ -1,21 +1,40 @@
-<h1>{{userProfile.username}} Profile</h1>
-{{#if user}}
-<a href="mailto:{{userProfile.email}} ">Contact Me</a>
+
+
+<section id="profile-container">
+    <div>
+        <img class="img-profile" src="{{user.image}}">
+    </div>
+
+    <div id="profile-info-container">
+        <h3 class="profile-info">{{user.username}}</h3>
+        <a class="profile-info" href="mailto:{{user.email}} ">Contact Me</a>
+    </div>
+</section>
+
+// NEW SECTION
 <a href="/user-profile/edit"><p>Edit profile</p></a>
 {{/if}}
 <h3>Description</h3>
 <p>{{userProfile.description}}</p>
-<h3>Activities</h3>
-{{#each userProfile.activityIds}}
-<p>{{this.activity}}</p>
-<p>{{this.description}}</p>
-<p>{{this.find}}</p>
-<p>{{this.finale}}</p>
-<p>{{this.finale2}}</p>
-<a href="/edit/{{this._id}}"><p>Edit activity</p></a>
-<form action="/description/{{this._id}}/delete" method="POST">
-    <button>Delete</button>
-</form>
+
+<section id="profile-activities">
+    <h3>Activities</h3>
+
+        {{#each userProfile.activityIds}}
+        <div id="profile-activity-container">
+        <h4>{{this.activity}}</h4>
+        <p>{{this.description}}</p>
+        <p>{{this.find}}</p>
+        <p>{{finale}}</p>
+        <p>{{finale}}</p>
+        <a href="/edit/{{this._id}}">Edit activity</a>
+        <form action="/description/{{this._id}}/delete" method="POST">
+            <button>Delete</button>
+        </form>
+        </div>
+
 {{/each}}
+
+</section>
 
 

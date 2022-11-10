@@ -9,6 +9,7 @@ router.get("/", async (req, res) => {
   console.log("inside route")
     try{
       const activityDb = await Activity.find()
+
        console.log(activityDb)
        
        activityDb.forEach( (act) => {
@@ -27,6 +28,7 @@ router.get("/", async (req, res) => {
         act.finale = `${day}/${month}/${year}    ${hour}:${minute}`
         act.finale2 = `${day2}/${month2}/${year2}    ${hour2}:${minute2}`
     });
+
        res.render("index", {activityDb, user});
    }catch(err){
        console.log(err)

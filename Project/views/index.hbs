@@ -1,13 +1,25 @@
+
+
 <section>
 {{#if user}}
 
-<h2>Activities</h2>
+
+
+<h2 id="h2-home-activities">Check Out What's Going On</h2>
+
 {{#each activityDb}}
-<a href="/description/{{this._id}}"><p>Activity: {{this.activity}}</p></a>
-<p>Find: {{this.find}}</p>
-<p>From: {{finale}}</p>
-<p>To: {{finale2}}</p>
-<p>---------------------------------</p>
+
+
+<div id="activities-container">
+    {{#if this.image}}
+    <img id="img-actvities" src="{{this.image}}">
+    {{/if}}
+    <p><a href="/description/{{this._id}}">Activity: {{this.activity}}</a></p>
+    <p>Find: {{this.find}}</p>
+    <p>From: {{finale}}</p>
+    <p>To: {{finale2}}</p>
+</div>
+
 
 {{/each}}
 
