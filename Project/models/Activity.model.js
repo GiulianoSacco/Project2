@@ -15,7 +15,7 @@ const actSchema = new Schema(
     find: {
         type: Array,
         items: {
-          enum: [ "Couple", "Group of friends", "Date", "Family" ]
+          enum: [ "couple", "group of friends", "date", "family" ]
         },
         "uniqueItems": true,
         "minItems": 1
@@ -42,7 +42,7 @@ const actSchema = new Schema(
   },
 
     image: {
-      type: String, //Link
+      type: String, 
       unique: true
     }
 

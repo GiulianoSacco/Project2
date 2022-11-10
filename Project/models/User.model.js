@@ -34,7 +34,6 @@ const userSchema = new Schema(
     activityIds: {
       type: [{ type: Schema.Types.ObjectId, ref: 'Activity' }],
     },
-
     description: {
       type: String,
     },

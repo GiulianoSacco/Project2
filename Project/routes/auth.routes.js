@@ -62,14 +62,12 @@ router.post("/signup", isLoggedOut, (req, res) => {
     .then((hashedPassword) => {
       console.log({fullName, username, email, password, status, hashedPassword})
       // Create a user and save it in the database
-      const newUser = User.create({ fullName, username, email, password:hashedPassword, status });
-      console.log(newUser)
-      return newUser
+      
+      return User.create({ fullName, username, email, password: hashedPassword, status });
     })
     .then((user) => {
-      console.log('after creating')
-      res.redirect("/auth/login");
       req.session.currentUser = user
+      res.redirect("/");
     })
     .catch((error) => {
       if (error instanceof mongoose.Error.ValidationError) {

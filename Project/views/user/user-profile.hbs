@@ -6,14 +6,16 @@
     </div>
 
     <div id="profile-info-container">
-        <h3 class="profile-info">{{user.username}}</h3>
-        <a class="profile-info" href="mailto:{{user.email}} ">Contact Me</a>
+        <h3 class="profile-info">{{userProfile.username}}</h3>
+        {{#if isItTheSame}} 
+        <a class="profile-info" href="mailto:{{userProfile.email}} ">Contact Me</a>
+        {{/if}}
     </div>
 </section>
-
-// NEW SECTION
+{{#if isTheSame}}    
 <a href="/user-profile/edit"><p>Edit profile</p></a>
 {{/if}}
+
 <h3>Description</h3>
 <p>{{userProfile.description}}</p>
 

@@ -6,32 +6,37 @@ const User = require("../models/User.model")
 const MONGO_URI = "mongodb://localhost:27017/project2"
 
 
-// const activities = [
-//   {
-//     activity: "Hiking", 
-//     description: "Making a pilgrimage to Montserrat.",
-//     find: ["group of friends"],
-//     from: "11-11-2022",
-//     to: "11-11-2022",
-//     image: "https://www.barcelona-tourist-guide.com/images/ext/attractions/montserrat/L550/montserrat-barcelona-29.jpg"
-//   },
-//   {
-//     activity: "Drinks", 
-//     description: "Looking to go out for some drinks on top of Barcelona",
-//     find: ["date"],
-//     from: "11-11-2022",
-//     to: "11-11-2022",
-//     image: "https://estaticos-cdn.elperiodico.com/clip/89afd1ee-ec20-4651-bbb3-d7c9ba5144cc_alta-libre-aspect-ratio_default_0.jpg"
-//   },
-//   {
-//     activity: "Lunch", 
-//     description: "Tapas hopping around Barcelona",
-//     find: ["couple"],
-//     from: "11-11-2022",
-//     to: "11-11-2022",
-//     image: "https://img.theculturetrip.com/wp-content/uploads/2016/02/IMG_4426.jpg"
-//   }
-// ]
+
+const activities = [
+  {
+    activity: "Hiking", 
+    description: "Making a pilgrimage to Montserrat.",
+    find: ["group of friends"],
+    from: "11-11-2022",
+    to: "11-11-2022",
+    locations: "Sants",
+    image: "https://www.barcelona-tourist-guide.com/images/ext/attractions/montserrat/L550/montserrat-barcelona-29.jpg"
+  },
+  {
+    activity: "Drinks", 
+    description: "Looking to go out for some drinks on top of Barcelona",
+    find: ["date"],
+    from: "11-11-2022",
+    to: "11-11-2022",
+    locations: "Eixample",
+    image: "https://estaticos-cdn.elperiodico.com/clip/89afd1ee-ec20-4651-bbb3-d7c9ba5144cc_alta-libre-aspect-ratio_default_0.jpg"
+  },
+  {
+    activity: "Lunch", 
+    description: "Tapas hopping around Barcelona",
+    find: ["couple"],
+    from: "11-11-2022",
+    to: "11-11-2022",
+    locations: "Sant Marti",
+    image: "https://img.theculturetrip.com/wp-content/uploads/2016/02/IMG_4426.jpg"
+  }
+]
+
 
 
 
