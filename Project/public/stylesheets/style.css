@@ -21,8 +21,7 @@ https://as01.epimg.net/betech/imagenes/2018/03/29/portada/1522336308_098657_1522
 
 
 body {
-
-
+  font-family: 'Ubuntu', sans-serif;
 }
 
 header {
@@ -35,7 +34,6 @@ header {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 5%;
   font-family: 'Ubuntu', sans-serif;
 }
@@ -43,10 +41,11 @@ header {
 .nav-links {
   display: flex;
   list-style: none;
+  align-items: center;
 }
 
 .nav-item {
-  padding: 0.5rem;
+  padding: 0.25rem;
   margin: 0.25rem;
 }
 
@@ -60,6 +59,14 @@ li, a {
 
 .logo {
   height: 3rem;
+}
+
+#logout-btn {
+  border: none;
+  padding: 0.25rem 0.65rem;
+  border-radius: 10px;
+  color: white;
+  background-color: #26528C;
 }
 
 #img-travelbuddy {
@@ -92,12 +99,14 @@ li, a {
 
 .input i {
   color: #26528C;
+  /* font-size: 12px; */
 }
 
 .input input {
   background: none;
   outline: none;
   border: none;
+  font-size: 12px;
 }
 
 .input label {
@@ -137,6 +146,7 @@ li, a {
   color: #26528C;
 }
 
+
 .input-btn {
   background-color: white;
   padding: 0.5rem 3rem;
@@ -161,7 +171,6 @@ li, a {
 
 
 
-
 /* HOMEPAGE/ACTIVITIES */
 
 #h2-home-activities {
@@ -172,7 +181,7 @@ li, a {
 #activities-container {
   margin: 1rem;
   padding: 1rem;
-  background-color: beige;
+  background-color: #26528C;
   border-radius: 25px;
 }
 
@@ -200,19 +209,18 @@ li, a {
   padding: 0.25rem;
 }
 
+#h3-profile-info {
+  font-size: 1.5em;
+}
+
 .img-profile {
   width: 100px;
   height: 100px;
-  border-radius: 50%;
+  border-radius: 25px;
   border: solid 2px #26528C;
 }
 
-#profile-activities {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-#profile-activities {
+#profile-description-activities {
   padding: 1rem;
 }
 
@@ -220,10 +228,28 @@ li, a {
   margin-top: 1rem;
   margin-bottom: 1rem;
   padding: 1rem;
-  background-color: beige;
+  background-color: #26528C;
   border-radius: 25px;
 }
 
+.h4-title-description {
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.p-description {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+
+/* EDIT PROFILE */
+
+#input-profile-description {
+  height: auto !important;
+  width: 100%;
+  resize: horizontal;
+}
 
 
 /* CREATE ACTIVITY */
@@ -238,6 +264,12 @@ li, a {
   font-family: 'Ubuntu', sans-serif;
 }
 
+.title-h2-white{
+  font-size: 18px;
+  padding: 0.25rem;
+  color: white;
+}
+
 #input-radio {
   display: inline;
   font-size: 12px;
@@ -245,13 +277,12 @@ li, a {
 }
 
 #input-textarea {
-  width: 280px;
+  width: 200px;
 }
-
 
 .input label { 
   font-weight: 400;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 #input-description {
@@ -260,37 +291,43 @@ li, a {
   resize: horizontal;
 }
 
+#input-locations {
+  display: inline;
+}
+
+#input-image {
+  display: inline;
+}
 
 
+/* ACTIVITY DESCRIPTION */
 
+#img-activity-description {
+  width: 100%;
+  height: 25%;
+  object-fit: cover;
+  object-position: center;
+}
 
+.from-to-dates {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.date {
+  padding: 0.5rem;
+}
 
 /* MAP */
 
-
-.marker { /* los estilos del marker */
+/* .marker { 
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background-color:#40798C;
 }
+
 
 .hidden {
   display: none;
@@ -300,22 +337,16 @@ li, a {
   height: 200px;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
 #map{ 
   position: absolute;
 }
 
-.map { /* los estilos del mapa */
-  position: absolute;
+.map {
   top: 400;
   bottom: 0;
-  width: 300px;
-  height: 300px
-}
+  width: 100%;
+  height: 25%;
+} */
 
 
 

@@ -2,15 +2,15 @@
 <div class="create-container">
     
     <form class="forms-container" action="/create" method="post" enctype="multipart/form-data">
-
-
-    <h2 class="title">What do you feel like doing?</h2>
+    
+    <h2 class="title-h2-white">What would you like to do?</h2>
 
     <div class="input">
-      <input type="text" name="activity" placeholder="Surfing" />
+      <input type="text" name="activity" placeholder="Name of Activity" />
     </div>
+
     <div class="input" id="input-description">
-      <textarea id="input-textarea" name="description" cols="30" rows="2"> </textarea>
+      <textarea id="input-textarea" name="description"> </textarea>
     </div>
 
     <div class="input" id="input-radio">
@@ -21,43 +21,42 @@
         <input type="radio" name="find" value="date" placeholder="Looking for" /> Date
         <input type="radio" name="find" value="family" placeholder="Looking for" /> Family
     </div>
+
     <div class="input">
       <i class="fas fa-calendar"></i>
       <input type="datetime-local" name="from" placeholder="Start" />
     </div>
 
     <div class="input">
-
       <i class="fas fa-calendar"></i>
       <input type="date" name="to" placeholder="End" />
     </div>
-    <div class="">
-      <button class="input-btn" type="submit">Create</button>
-    <label for="locations"> Where
-    <select name="locations" id="locations">
-    <option label="Ciutat Vella" value="Ciutat Vella">Ciutat Vella  </option>
-    <option label="Nou Barris"  value="Nou Barris">Nou Barris </option>
-    <option label="Horta-Guinardo"  value="Horta-Guinardo">Horta-Guinardo </option>
-    <option label="Sarria-Sant Gervasi"  value="Sarria-Sant Gervasi">Sarria-Sant Gervasi  </option>
-    <option label="Les Corts"  value="Les Corts">Les Corts  </option>
-    <option label="Gracia"  value="Gracia">Gracia </option>
-    <option label="Sants"  value="Sants">Sants  </option>
-    <option label="Eixample"  value="Eixample">Eixample </option>
-    <option label="Sant Marti"  value="Sant Marti">La Nueva Izquierda del Ensanche  </option>
-    <option label="Sant Andreu"  value="Sant Andreu">San Antonio</option>
-</select>
-</label>
+
+    <div class="input" id="input-locations">
+      <label for="locations"> Where
+        <select name="locations" id="locations">
+          <option label="Ciutat Vella" value="Ciutat Vella">Ciutat Vella  </option>
+          <option label="Nou Barris"  value="Nou Barris">Nou Barris </option>
+          <option label="Horta-Guinardo"  value="Horta-Guinardo">Horta-Guinardo </option>
+          <option label="Sarria-Sant Gervasi"  value="Sarria-Sant Gervasi">Sarria-Sant Gervasi  </option>
+          <option label="Les Corts"  value="Les Corts">Les Corts  </option>
+          <option label="Gracia"  value="Gracia">Gracia </option>
+          <option label="Sants"  value="Sants">Sants  </option>
+          <option label="Eixample"  value="Eixample">Eixample </option>
+          <option label="Sant Marti"  value="Sant Marti">La Nueva Izquierda del Ensanche  </option>
+          <option label="Sant Andreu"  value="Sant Andreu">San Antonio</option>
+        </select>
+      </label>
     </div>
-  <div class="input">
+
+    <div class="input" id="input-image">
         <label>Image:
           <input type="file" name="activity-image" />
         </label>
-      </div>
+    </div>
 
-  
-
-      <button type="submit">Create</button>
-
+    <div class="">
+      <button class="input-btn" type="submit">Create</button>
     </div>
 
     {{#if errorMessage}}
@@ -66,58 +65,5 @@
 
   </form>
 </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-{{!--     
-    <form action="/create" method="post">
- 
-     <label> Activity
-      <input type="text" name="activity" placeholder="Surfing" />
-    </label>
-    
-    <label> Description
-      <textarea name="description" cols="30" rows="4"> </textarea>
-    </label>
-
-    <label> Activity for
-      <input type="radio" name="find" value="Couple" placeholder="Looking for" /> Couple
-      <input type="radio" name="find" value="Group of friends" placeholder="Looking for" /> Group of friends
-      <input type="radio" name="find" value="Date" placeholder="Looking for" /> Date
-      <input type="radio" name="find" value="Family" placeholder="Looking for" /> Family
-    </label>
-
-    <label> From
-      <input type="datetime-local" name="from" placeholder="Start" />
-    </label>
-
-    <label> To
-      <input type="datetime-local" name="to" placeholder="End" />
-    </label>
 
 
-
-<label for="locations"> Locations
-<select name="locations" id="locations">
-  <option label="Ciutat Vella" value="Ciutat Vella">Ciutat Vella</option>
-  <option label="Nou Barris"  value="Nou Barris">Nou Barris</option>
-  <option label="Horta-Guinardo"  value="Horta-Guinardo">Horta-Guinardo</option>
-  <option label="Sarria-Sant Gervasi"  value="Sarria-Sant Gervasi">Sarria-Sant Gervasi</option>
-  <option label="Les Corts"  value="Les Corts">Les Corts</option>
-  <option label="Gracia"  value="Gracia">Gracia</option>
-  <option label="Sants"  value="Sants">Sants</option>
-  <option label="Eixample"  value="Eixample">Eixample</option>
-  <option label="Sant Marti"  value="Sant Marti">La Nueva Izquierda del Ensanche</option>
-  <option label="Sant Andreu"  value="Sant Andreu">San Antonio</option>
-</select>
-</label>
-
-   <button type="submit"> Submit </button>
-   </form> --}}

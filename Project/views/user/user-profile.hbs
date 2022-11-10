@@ -1,32 +1,35 @@
 
-
 <section id="profile-container">
     <div>
         <img class="img-profile" src="{{user.image}}">
     </div>
 
     <div id="profile-info-container">
-        <h3 class="profile-info">{{userProfile.username}}</h3>
+        <h3 class="profile-info" id="h3-profile-info">{{userProfile.username}}</h3>
+        
         {{#if isItTheSame}} 
-        <a class="profile-info" href="mailto:{{userProfile.email}} ">Contact Me</a>
+            <a class="profile-info" href="mailto:{{userProfile.email}}">Contact Me</a>
+        {{/if}}
+
+        {{#if isTheSame}}    
+            <a href="/user-profile/edit"><p>Edit profile</p></a>
         {{/if}}
     </div>
 </section>
-{{#if isTheSame}}    
-<a href="/user-profile/edit"><p>Edit profile</p></a>
-{{/if}}
 
-<h3>Description</h3>
-<p>{{userProfile.description}}</p>
 
-<section id="profile-activities">
-    <h3>Activities</h3>
+<section id="profile-description-activities">
 
-        {{#each userProfile.activityIds}}
+    <h4 class="h4-title-description">About Me</h4>
+    <p class="p-description">{{userProfile.description}}</p>
+
+    <h4 class="h4-title-description">Activities</h4>
+
+    {{#each userProfile.activityIds}}
         <div id="profile-activity-container">
 
             {{#if this.image}}
-            <img id="img-actvities" src="{{this.image}}">
+                <img id="img-actvities" src="{{this.image}}">
             {{/if}}
             <h4>{{this.activity}}</h4>
             <p>{{this.description}}</p>
@@ -37,10 +40,9 @@
             <form action="/description/{{this._id}}/delete" method="POST">
                 <button>Delete</button>
             </form>
-
         </div>
 
-{{/each}}
+    {{/each}}
 
 </section>
 

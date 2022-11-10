@@ -13,7 +13,7 @@ router.get("/user-profile", isLoggedIn, async (req, res) => {
 
     try {
         const userProfile = await User.findById(user._id).populate("activityIds")
-        console.log(userProfile)
+        // console.log(userProfile)
         let isTheSame = true
         let isItTheSame = false
         res.render("user/user-profile", {userProfile, user, isTheSame})
@@ -25,7 +25,7 @@ router.get("/user-profile", isLoggedIn, async (req, res) => {
 })
 
 router.get("/user-profile/edit", isLoggedIn,  (req, res) => {
-    // const user = req.session.currentUser
+    const user = req.session.currentUser
     res.render("user/edit-profile")
 })
 
@@ -33,8 +33,8 @@ router.get("/user-profile/edit", isLoggedIn,  (req, res) => {
      const {description} = req.body
      const userId = req.session.currentUser._id
     
-     console.log(description)
-     console.log(userId)
+    //  console.log(description)
+    //  console.log(userId)
      try{
          const newdes = await User.findByIdAndUpdate(userId, {description: description})
          console.log(newdes)
