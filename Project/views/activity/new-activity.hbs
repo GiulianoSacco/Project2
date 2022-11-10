@@ -1,6 +1,6 @@
 <div class="container">
 
-    <form action="/create" method="post">
+    <form action="/create" method="post" enctype="multipart/form-data">
 
     <h2 class="title">What Do You Want To Do?</h2>
 
@@ -12,10 +12,10 @@
     </div>
     <div class="input">
       <label> Activity for
-        <input type="radio" name="find" value="Couple" placeholder="Looking for" /> Couple
-        <input type="radio" name="find" value="Group of friends" placeholder="Looking for" /> Group of friends
-        <input type="radio" name="find" value="Date" placeholder="Looking for" /> Date
-        <input type="radio" name="find" value="Family" placeholder="Looking for" /> Family
+        <input type="radio" name="find" value="couple" placeholder="Looking for" /> Couple
+        <input type="radio" name="find" value="group of friends" placeholder="Looking for" /> Group of friends
+        <input type="radio" name="find" value="date" placeholder="Looking for" /> Date
+        <input type="radio" name="find" value="family" placeholder="Looking for" /> Family
       </label>
     </div>
     <div class="input">
@@ -41,8 +41,14 @@
 </select>
 </label>
     </div>
+  <div class="input">
+        <label>Image:
+          <input type="file" name="activity-image" />
+        </label>
+      </div>
 
-    <div class="">
+  
+
       <button type="submit">Create</button>
     </div>
 
