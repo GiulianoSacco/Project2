@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const markerDivs = document.querySelectorAll(".marker") /*Hacer esto tambien*/ 
 
   // Create an array to store all the popups (one for each location)
-  const popups = []
+  
 
   mapboxgl.accessToken = "pk.eyJ1IjoiZ2l1bGlhbm8zMjEiLCJhIjoiY2xhOXFkM2VuMDBmczN4cW1qYXVwOWR3NyJ9.TuMhw4ZcNTbOZ8ZgivexBw"
 
@@ -23,13 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
     zoom: 10 // puso 10
   })
 
-   // Create the popus for each location and store them into the popus array Paso 5
-   popupDivs.forEach((popupDiv) => {
-    const popup = popupDiv.innerHTML
-    popups.push(new mapboxgl.Popup({ offset: 5 }).setHTML(
-      `${popup}`
-    ))
-  })
 
  
 
@@ -39,7 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const pos = posS.map(num => Number(num))
     new mapboxgl.Marker(markerDivs[i])
       .setLngLat(pos)
-      .setPopup(popups[i]) // sets a popup on this marker
       .addTo(map)
   })
 });
