@@ -30,8 +30,9 @@ router.get("/user-profile/edit", isLoggedIn,  (req, res) => {
 })
 
  router.post("/user-profile/edit", async (req, res) => {
+    const userId = req.session.currentUser._id
      const {description} = req.body
-     const userId = req.session.currentUser._id
+
     
     //  console.log(description)
     //  console.log(userId)

@@ -31,15 +31,22 @@
             {{#if this.image}}
                 <img id="img-actvities" src="{{this.image}}">
             {{/if}}
-            <h4>{{this.activity}}</h4>
-            <p>{{this.description}}</p>
-            <p>{{this.find}}</p>
-            <p>{{finale}}</p>
-            <p>{{finale2}}</p>
-            <a href="/edit/{{this._id}}">Edit activity</a>
-            <form action="/description/{{this._id}}/delete" method="POST">
-                <button>Delete</button>
-            </form>
+
+            <div id="activities-description-container">
+                <h3 id="h3-title-profile-activities">{{this.activity}}</h3>
+                <p>{{this.description}}</p>
+                <p>{{this.find}}</p>
+
+                <div id="activities-date-container">
+                    <p>{{finale}}</p>
+                    <p id="activities-date-to"> {{finale2}}</p>
+                </div>
+                <a href="/edit/{{this._id}}">Edit activity</a>
+                <form action="/description/{{this._id}}/delete" method="POST">
+                    <button>Delete</button>
+                </form>
+            </div>
+
         </div>
 
     {{/each}}

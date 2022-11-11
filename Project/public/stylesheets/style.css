@@ -22,6 +22,7 @@ https://as01.epimg.net/betech/imagenes/2018/03/29/portada/1522336308_098657_1522
 
 body {
   font-family: 'Ubuntu', sans-serif;
+  height: 100vh;
 }
 
 header {
@@ -255,6 +256,7 @@ li, a {
 #h2-home-activities {
   padding: 0.5rem;
   text-align: center;
+  font-size: 1.5rem;
 }
 
 #activities-container {
@@ -265,22 +267,54 @@ li, a {
 }
 
 #img-actvities {
+  width: 100%;
   height: 25%;
-  
+  border-radius: 10px;
 }
+
+#activities-description-container {
+  background-color: white;
+  border-radius: 0 0 10px 10px;
+  padding: 0.5rem;
+  font-size: 14px;
+}
+
+#title-activities {
+  font-size: 1.25rem !important;
+  color: #26528C;
+
+}
+
+#h3-title-activities {
+  padding-top: 0.25em;
+}
+
+#activities-date-container {
+  display: flex;
+}
+
+#activities-date-to {
+  padding-left: 0.75rem;
+}
+
+
+
+
 
 
 /* USER PROFILE */
 
 #profile-container {
   display: flex;
-  padding: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 #profile-info-container {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 
 }
 
@@ -320,6 +354,11 @@ li, a {
 .p-description {
   font-size: 12px;
   font-weight: 300;
+}
+
+#h3-title-profile-activities {
+  color: #26528C;
+  font-size: 1.25rem !important;
 }
 
 
@@ -382,11 +421,33 @@ li, a {
 
 /* ACTIVITY DESCRIPTION */
 
+#activity-description-container {
+  padding: 1rem;
+}
+
 #img-activity-description {
   width: 100%;
   height: 25%;
   object-fit: cover;
   object-position: center;
+  border-radius: 25px;
+}
+
+#activity-container {
+  background-color: #26528C;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  border-radius: 25px;
+}
+
+#activity-container-white {
+  background-color: white;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+#h3-title-activity {
+  color: #26528C;
 }
 
 .from-to-dates {
@@ -398,6 +459,8 @@ li, a {
 .date {
   padding: 0.5rem;
 }
+
+
 
 /* MAP */
 
