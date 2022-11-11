@@ -430,6 +430,9 @@ li, a {
   display: inline;
 }
 
+.textbox {
+  width: 200px;
+}
 
 
 /* EDIT ACTIVITY */
@@ -523,7 +526,7 @@ i {
 }
 
 .date {
-  padding: 0.5rem;
+  /* padding: 0.5rem; */
 }
 
 #p-date-from {
