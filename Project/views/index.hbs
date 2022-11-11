@@ -5,17 +5,22 @@
 
 <h2 id="h2-home-activities">Check Out What's Going On</h2>
 
-{{#each activityDb}}
 
+{{#each activityDb}}
 
 <div id="activities-container">
     {{#if this.image}}
     <img id="img-actvities" src="{{this.image}}">
     {{/if}}
-    <p><a href="/description/{{this._id}}">Activity: {{this.activity}}</a></p>
-    <p>Find: {{this.find}}</p>
-    <p>From: {{finale}}</p>
-    <p>To: {{finale2}}</p>
+    <div id="activities-description-container">
+        <h3 id="h3-title-activities"><a id="title-activities" href="/description/{{this._id}}">Activity: {{this.activity}}</a></h3>
+        <p>Find: {{this.find}}</p>
+
+        <div id="activities-date-container">
+            <p>From: {{finale}}</p>
+            <p id="activities-date-to">To: {{finale2}}</p>
+        </div>
+    </div>
 </div>
 
 {{/each}}
