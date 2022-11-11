@@ -515,6 +515,10 @@ li, a {
   display: flex;
 }
 
+#locations-container {
+  display: flex;
+}
+
 i {
   color:#26528C;
 }

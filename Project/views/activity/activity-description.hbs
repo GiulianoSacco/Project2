@@ -16,6 +16,12 @@
         <p>{{act.description}}</p>
         <p class="p-activity-description">Looking to go with:</p>
         <p>{{act.find}}</p>
+
+        <div id="locations-container">
+          <i class="fa fa-map-marker"></i>
+          <p id="p-location">{{act.locations}}</p>
+        </div>
+
       </div>
       <div class="from-to-dates">
         <i class="fas fa-calendar"></i>
@@ -32,7 +38,7 @@
 
 
 
-<p>{{act.locations}}</p>
+
 <div class="map" id="map"></div>
 
 {{!-- Create hidden elements to store the display style of the map--}}
