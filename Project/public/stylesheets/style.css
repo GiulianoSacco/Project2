@@ -257,6 +257,8 @@ li, a {
   padding: 0.5rem;
   text-align: center;
   font-size: 1.5rem;
+  color:#26528C;
+  font-weight: bolder;
 }
 
 #activities-container {
@@ -324,6 +326,7 @@ li, a {
 
 #h3-profile-info {
   font-size: 1.5em;
+  color: #26528C;
 }
 
 .img-profile {
@@ -349,6 +352,7 @@ li, a {
 .h4-title-description {
   font-size: 1em;
   font-weight: 500;
+  color:#26528C;
 }
 
 .p-description {

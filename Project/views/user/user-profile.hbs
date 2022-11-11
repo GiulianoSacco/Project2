@@ -1,7 +1,8 @@
 
 <section id="profile-container">
     <div>
-        <img class="img-profile" src="{{user.image}}">
+        <img class="img-profile" src="{{userProfile.image}}">
+
     </div>
 
     <div id="profile-info-container">
@@ -41,9 +42,12 @@
                     <p>{{finale}}</p>
                     <p id="activities-date-to"> {{finale2}}</p>
                 </div>
+                
                 <a href="/edit/{{this._id}}">Edit activity</a>
                 <form action="/description/{{this._id}}/delete" method="POST">
                 <button id="activity-delete-btn"><i class="fa fa-trash"></i></button>
+
+
                 </form>
             </div>
 
