@@ -12,13 +12,18 @@
 
       <div>
         <p>Go with: <a href="/user-profile/{{act.author._id}}">{{act.author.username}}</a></p>
-        <p>About: </p>
+        <p class="p-activity-info">About: </p>
         <p>{{act.description}}</p>
-        <p>Looking to go with:{{act.find}}</p>
+        <p class="p-activity-info">Looking to go with:</p>
+        <p>{{act.find}}</p>
+        <div id="activity-location-container">
+          <i class="fa fa-map-marker"></i>
+          <p id="p-location">{{act.locations}}</p>
+        </div>
       </div>
       <div class="from-to-dates">
         <i class="fas fa-calendar"></i>
-        <p class="date">From: {{finale}}</p>
+        <p id="p-date-from" class="date">From: {{finale}}</p>
         <p class="date">To: {{finale2}}</p>
       </div>
 
@@ -29,10 +34,7 @@
 
 
 
-
-
-<p>{{act.locations}}</p>
-<div class="map" id="map"></div>
+<div class="map" id="map">
 
 {{!-- Create hidden elements to store the display style of the map--}}
 <div class="hidden map-center"> {{mapCenter}}  </div>
@@ -42,6 +44,7 @@
   
   <div class="hidden pos">  {{location.pos}}  </div>
   <div class="marker">  </div>
+</div>
 
 
 </section>
