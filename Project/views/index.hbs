@@ -10,7 +10,7 @@
 
 <div id="activities-container">
     {{#if this.image}}
-    <img id="img-actvities" src="{{this.image}}">
+    <a href="/description/{{this._id}}"><img id="img-actvities" src="{{this.image}}"></a>
     {{/if}}
     <div id="activities-description-container">
         <h3 id="h3-title-activities"><a id="title-activities" href="/description/{{this._id}}">Activity: {{this.activity}}</a></h3>

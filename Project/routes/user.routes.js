@@ -16,7 +16,7 @@ router.get("/user-profile", isLoggedIn, async (req, res) => {
         // console.log(userProfile)
         let isTheSame = true
         let isItTheSame = false
-        res.render("user/user-profile", {userProfile, user, isTheSame})
+        res.render("user/user-profile", {userProfile, user, isTheSame, isItTheSame})
 
     } catch (error) {
         console.log(error)
@@ -89,7 +89,7 @@ router.get("/user-profile/:userId", isLoggedIn, async (req, res) => {
         
 
         console.log({user, userId})
-        res.render("user/user-profile", {userProfile, user, isTheSame})
+        res.render("user/user-profile", {userProfile, user, isTheSame, isItTheSame})
 
     } catch (error) {
         console.log(error)
