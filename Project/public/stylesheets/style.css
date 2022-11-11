@@ -529,6 +529,10 @@ i {
   /* padding: 0.5rem; */
 }
 
+#date-from {
+  padding-left: 1rem;
+}
+
 #p-date-from {
   padding-left: 1rem;
 }
@@ -536,6 +540,11 @@ i {
 #activity-delete-btn {
   border: none;
   color: #26528C;
+}
+
+.p-activity-description {
+  color: #26528C;
+  font-size: 1.25em;
 }
 
 

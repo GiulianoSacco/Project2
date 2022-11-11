@@ -11,14 +11,15 @@
       <h3 id="h3-title-activity">{{act.activity}}</h3>
 
       <div>
-        <p>Go with: <a href="/user-profile/{{act.author._id}}">{{act.author.username}}</a></p>
-        <p>About: </p>
+        <p class="p-activity-description">Go with: <a href="/user-profile/{{act.author._id}}">{{act.author.username}}</a></p>
+        <p class="p-activity-description">About: </p>
         <p>{{act.description}}</p>
-        <p>Looking to go with:{{act.find}}</p>
+        <p class="p-activity-description">Looking to go with:</p>
+        <p>{{act.find}}</p>
       </div>
       <div class="from-to-dates">
         <i class="fas fa-calendar"></i>
-        <p class="date">From: {{finale}}</p>
+        <p class="date" id="date-from">From: {{finale}}</p>
         <p class="date">To: {{finale2}}</p>
       </div>
 
