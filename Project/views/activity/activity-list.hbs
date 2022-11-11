@@ -1,4 +1,6 @@
 {{#each userProfile.activityIds}}
+
+
 <p>{{this.activity}}</p>
 <p>{{this.description}}</p>
 <p>{{this.find}}</p>
@@ -8,4 +10,6 @@
 <form action="/description/{{this._id}}/delete" method="POST">
     <button>Delete</button>
 </form>
+
+
 {{/each}}

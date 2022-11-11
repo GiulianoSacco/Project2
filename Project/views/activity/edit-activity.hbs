@@ -1,30 +1,40 @@
-<h2>Edit the activity: {{actiDb.description}}</h2>
- 
-<form action="/edit/{{actiDb._id}}" method="post">
-  <label> Activity:
-    <input type="text" name="activity" value="{{actiDb.activity}}" />
-  </label>
- 
+<div class="container">
 
-  <label> Description:
-    <textarea name="description" cols="30" rows="4" >{{actiDb.description}}</textarea>
-  </label>
- 
-     <label> Activity for:
-      <input type="checkbox" name="find" value="couple"  /> Couple
-      <input type="checkbox" name="find" value="group of friends"  /> Group of friends
-      <input type="checkbox" name="find" value="date"  /> Date
-      <input type="checkbox" name="find" value="family"  /> Family
+  <form class="forms-container" action="/edit/{{actiDb._id}}" method="post">
+
+  <h2 class="title-h2-white">Edit the activity:</h2>
+  <p id="title-activity-edit">{{actiDb.description}}</p>
+
+  <div class="input">
+      <input type="text" name="activity" value="{{actiDb.activity}}" placeholder="Activity"/>
+  </div>
+
+  <div class="input" id="input-description-edit">
+    <label> Description:
+      <textarea class="input-textarea" name="description" placeholder="Description" cols="30" rows="4" >{{actiDb.description}}</textarea>
     </label>
+  </div>
 
-    <label> From
+  <div class="input" id="input-checkbox">
+     <label> Activity for:</label>
+     <br>
+        <input type="checkbox" name="find" value="couple"  /> Couple
+        <input type="checkbox" name="find" value="group of friends"  /> Group of friends
+        <input type="checkbox" name="find" value="date"  /> Date
+        <input type="checkbox" name="find" value="family"  /> Family
+  </div>
+
+  <div class="input">
+      <i class="fas fa-calendar"></i>
       <input type="datetime-local" name="from" placeholder="Start" value="{{actiDb.from}}" />
-    </label>
+  </div>
 
-    <label> To
+  <div class="input">
+      <i class="fas fa-calendar"></i>
       <input type="datetime-local" name="to" placeholder="End" value="{{actiDb.to}}" />
-    </label>
+  </div>
 
+  <div class="input" id="input-locations-edit">
     <label for="locations"> Where
       <select name="locations" id="locations">
       <option label="Ciutat Vella" value="Ciutat Vella">Ciutat Vella    </option>
@@ -39,6 +49,26 @@
       <option label="Sant Andreu"  value="Sant Andreu">San Antonio</option>
       </select>
     </label>
+  </div>
 
-  <button>Save changes</button>
-</form>
+  <div class="">
+    <button class="input-btn-white">Save changes</button>
+  </div>
+  
+  </form>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

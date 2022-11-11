@@ -227,7 +227,7 @@ li, a {
 
 
 .container {
-  height: 65vh;
+  height: 75vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -395,7 +395,7 @@ li, a {
   height: auto !important;
 }
 
-#input-textarea {
+.input-textarea {
   width: 200px;
 }
 
@@ -417,6 +417,36 @@ li, a {
 #input-image {
   display: inline;
 }
+
+
+
+/* EDIT ACTIVITY */
+
+#title-activity-edit {
+  font-size: 1.5rem;
+  color: white;
+}
+
+#input-description-edit {
+  height: auto !important;
+  width: 100%;
+  resize: horizontal;
+}
+
+#input-checkbox {
+  display: inline;
+  font-size: 12px;
+  height: auto !important;
+}
+
+.input-edit-activity-date-container {
+  display: flex;
+}
+
+#input-locations-edit {
+  display: inline;
+}
+
 
 
 /* ACTIVITY DESCRIPTION */
@@ -460,11 +490,17 @@ li, a {
   padding: 0.5rem;
 }
 
+#activity-delete-btn {
+  border: none;
+  color: #26528C;
+}
+
+
 
 
 /* MAP */
 
- /* .marker { 
+ .marker { 
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -481,15 +517,17 @@ li, a {
 }
 
 #map{ 
-  position: absolute;
+  /* position: absolute; */
 }
 
 .map {
-  top: 400;
-  bottom: 0;
+  position: relative;
+  /* top: 400;
+  bottom: 0; */
   width: 100%;
   height: 25%;
-}  */
+  border-radius: 25px;
+} 
 
 
 
