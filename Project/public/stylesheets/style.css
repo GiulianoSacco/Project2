@@ -29,6 +29,8 @@ header {
 
 }
 
+
+
 /* HOMEPAGE */
 
 .homepage {
@@ -257,6 +259,8 @@ li, a {
   padding: 0.5rem;
   text-align: center;
   font-size: 1.5rem;
+  color: #26528C;
+  font-weight: bold;
 }
 
 #activities-container {
@@ -368,13 +372,15 @@ li, a {
   height: auto !important;
   width: 100%;
   resize: horizontal;
+  display: flex;
+  flex-direction: column;
 }
 
 
 /* CREATE ACTIVITY */
 
 .create-container {
-  height: 65vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -404,10 +410,13 @@ li, a {
   font-size: 12px;
 }
 
+
 #input-description {
   height: auto !important;
   width: 100%;
   resize: horizontal;
+  display: flex;
+  flex-direction: column;
 }
 
 #input-locations {
@@ -428,9 +437,12 @@ li, a {
 }
 
 #input-description-edit {
+  display: flex;
+  flex-direction: column;
   height: auto !important;
   width: 100%;
   resize: horizontal;
+  font-size: 12px;
 }
 
 #input-checkbox {
@@ -467,6 +479,7 @@ li, a {
   background-color: #26528C;
   padding: 1rem;
   margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   border-radius: 25px;
 }
 
@@ -480,6 +493,26 @@ li, a {
   color: #26528C;
 }
 
+.p-activity-info {
+  color: #26528C;
+  font-size: 1.25em;
+}
+
+#p-location {
+  color: #26528C;
+  font-weight: 800 !important;
+  font-size: 1.25em;
+  padding-left: 1rem;
+}
+
+#activity-location-container {
+  display: flex;
+}
+
+i {
+  color:#26528C;
+}
+
 .from-to-dates {
   display: flex;
   justify-content: center;
@@ -488,6 +521,10 @@ li, a {
 
 .date {
   padding: 0.5rem;
+}
+
+#p-date-from {
+  padding-left: 1rem;
 }
 
 #activity-delete-btn {
@@ -518,17 +555,17 @@ li, a {
 
 #map{ 
   /* position: absolute; */
+
 }
 
 .map {
-  position: relative;
-  /* top: 400;
-  bottom: 0; */
+  /* position: absolute; */
+  /* top: 400; */
+  /* bottom: 0; */
   width: 100%;
   height: 25%;
   border-radius: 25px;
 } 
-
 
 
 

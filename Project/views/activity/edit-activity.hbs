@@ -6,13 +6,12 @@
   <p id="title-activity-edit">{{actiDb.description}}</p>
 
   <div class="input">
-      <input type="text" name="activity" value="{{actiDb.activity}}" placeholder="Activity"/>
+      <input class="textbox" type="text" name="activity" value="{{actiDb.activity}}" placeholder="Activity"/>
   </div>
 
   <div class="input" id="input-description-edit">
-    <label> Description:
-      <textarea class="input-textarea" name="description" placeholder="Description" cols="30" rows="4" >{{actiDb.description}}</textarea>
-    </label>
+    <label> Description: </label>
+      <textarea class="input-textarea" name="description" placeholder="Description">{{actiDb.description}}</textarea>
   </div>
 
   <div class="input" id="input-checkbox">
